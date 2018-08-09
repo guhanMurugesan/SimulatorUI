@@ -1,0 +1,31 @@
+[_nghost-c1],[_nghost-c2],[_nghost-c3],[_nghost-c4]{
+    position: absolute;
+}
+
+[_nghost-c1]{
+    width: 100%;
+    height: 10%;
+    left: 0%;
+    top: 0%;
+}
+[_nghost-c4]{
+    width: 100%;
+    height: 20%;
+    left: 0%;
+    top: 80%;
+    background-color: black;
+    color: white;
+}
+[_nghost-c2]{
+    width: 20%;
+    height: 66%;
+    left: 0%;
+    top: 12%;
+}
+[_nghost-c3]{
+    width: 75%;
+    height: 66%;
+    left: 25%;
+    top: 12%;    
+}
+
