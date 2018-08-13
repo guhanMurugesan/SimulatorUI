@@ -5,6 +5,12 @@ import { CoreComponent } from './features/core/core.component';
 import { ConsoleComponent } from './features/console/console.component';
 import { MenuComponent } from './features/menu/menu.component';
 import { HeaderComponent } from './features/header/header.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { PrecommitmentComponent } from './features/precommitment/precommitment.component';
+import { PlayersComponent } from './features/players/players.component';
+import { AssetsComponent } from './features/assets/assets.component';
+import { ObjectupdateComponent } from './features/objectupdate/objectupdate.component';
+import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,10 +18,16 @@ import { HeaderComponent } from './features/header/header.component';
     CoreComponent,
     ConsoleComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    PrecommitmentComponent,
+    PlayersComponent,
+    AssetsComponent,
+    ObjectupdateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,5 @@
+<ul *ngFor="let player of Players">
+  <li (click)="selectPlayer(player)">{{player.name}}</li>
+</ul>
+
+<app-objectupdate [UpdateObject]="selectedPlayer"></app-objectupdate>
