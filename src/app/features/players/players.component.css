@@ -6,3 +6,25 @@
     left: 25%;
     top: 12%;   
 }
+
+
+#playerList
+{
+    float: left;
+    width: 100px;
+}
+#playerInfo
+{
+    float: left;
+    margin-left: 10%;
+}
+
+#playerList > div {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+    cursor: pointer;
+}
+.selected
+{
+    border-left: 6px solid greenyellow !important;
+}

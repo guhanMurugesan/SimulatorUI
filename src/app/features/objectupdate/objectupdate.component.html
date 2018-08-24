@@ -1,5 +1,10 @@
-<div *ngIf="UpdateObject">
-<ul *ngFor="let item of getProperties()">
-  <li>{{item}}</li>
-</ul>
+<div *ngIf="UpdateObject" id="updateobject">
+<table>
+  <tr *ngFor="let key of getProperties()">
+    <td>{{key}}</td>
+    <td>
+      <input type="text" [(ngModel)]="UpdateObject[key]" class="inputs">
+    </td>
+  </tr>
+</table>
 </div>

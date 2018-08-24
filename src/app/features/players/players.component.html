@@ -1,5 +1,19 @@
-<ul *ngFor="let player of Players">
-  <li (click)="selectPlayer(player)">{{player.name}}</li>
-</ul>
+<div id="playerList">
+    <div *ngFor="let player of Players" [class.selected]="player === selectedPlayer">
+      <p (click)="selectPlayer(player)"><strong>{{player.CMPNumber}}</strong> </p>
+    </div>
+</div>
 
-<app-objectupdate [UpdateObject]="selectedPlayer"></app-objectupdate>
+<div id="playerInfo">
+    <app-objectupdate [UpdateObject]="selectedPlayer"></app-objectupdate>
+    <table *ngIf="selectedPlayer">
+      <tr>
+        <td><button (click)="update()" class="button">update</button></td>
+        <td><b>{{Message}}</b></td>
+      </tr>
+    </table>
+    <div *ngIf="!selectedPlayer">
+          <br/>
+          <b>No Player selected!</b>
+    </div>
+</div>

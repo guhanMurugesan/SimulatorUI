@@ -7,13 +7,18 @@
   </div>
 
   <!-- Left-aligned links (default) -->
-  <a href="#news">News</a>
+  <a href="Home">Home</a>
 
 
   <!-- Right-aligned links -->
   <div class="topnav-right">
-    <a href="#search"><input type="text" placeholder="Enter GmuIp"></a>
-    <a href="#about"><input type="text" placeholder="Enter Port"></a>
+      <mat-slide-toggle (change)="slideChange()" [(ngModel)]="slideValue">
+        <span style="color:wheat" *ngIf="slideValue">
+          Server On
+        </span> 
+        <span style="color:wheat" *ngIf="!slideValue">
+            Server Off
+          </span> 
+      </mat-slide-toggle>
   </div>
-
 </div>

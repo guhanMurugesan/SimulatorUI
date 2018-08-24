@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayersService } from '../../players.service';
+import { PlayersService } from '../../Services/players.service';
 import { Player } from '../../Modals/player';
 
 @Component({
@@ -9,6 +9,7 @@ import { Player } from '../../Modals/player';
 })
 export class PlayersComponent implements OnInit {
 
+  Message:string;
   Players: Player[];
 
   selectedPlayer:Player;
@@ -26,6 +27,11 @@ export class PlayersComponent implements OnInit {
   selectPlayer(value: Player):void 
   {
     this.selectedPlayer = value;
+  }
+
+  update(){
+    this.Message = "";
+    this.playersService.setPlayer(this.selectedPlayer).subscribe(x=> this.Message = x );
   }
 
 }

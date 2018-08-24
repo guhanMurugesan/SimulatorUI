@@ -10,6 +10,7 @@ export class ObjectupdateComponent implements OnInit {
   constructor() { }
 
   @Input() UpdateObject : any;
+  @Input() objectService:any;
 
   ngOnInit() {
     console.log(this.UpdateObject);
