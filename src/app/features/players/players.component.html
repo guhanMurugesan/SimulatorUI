@@ -8,7 +8,9 @@
     <app-objectupdate [UpdateObject]="selectedPlayer"></app-objectupdate>
     <table *ngIf="selectedPlayer">
       <tr>
-        <td><button (click)="update()" class="button">update</button></td>
+        <td>
+            <button mat-raised-button color="primary" (click)="update()">Update</button>
+        </td>
         <td><b>{{Message}}</b></td>
       </tr>
     </table>

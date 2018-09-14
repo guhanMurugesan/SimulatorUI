@@ -10,17 +10,26 @@ import { ConsoleService } from '../../Services/console.service';
 })
 export class ConsoleComponent implements OnInit {
 
-  data :string;
+  data :String;
 
-  constructor(private consoleService:ConsoleService) { }
+  constructor(private consoleService:ConsoleService) { 
+    this.data = "";
+  }
 
   ngOnInit() {
-    interval(5000)
+    interval(500000)
       .pipe(
          startWith(0),
          switchMap(() => this.consoleService.getData())
       )
-      .subscribe(res=> this.data += res);
+      .subscribe(res=> this.setUp(res));
+  }
+
+  setUp(result)
+  {
+    var temp = this.data;
+    result+= temp;
+    this.data = result;
   }
 
 }

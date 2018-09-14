@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-import { JackpotSlip } from '../Modals/jackpot';
+import { Gamecap } from '../Modals/gamecap';
 import { Observable } from 'rxjs';
 
 const httpOptions = {
@@ -10,18 +10,18 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class JackpotService {
+export class GamecapService {
 
   constructor(private http:HttpClient) { }
 
-  get():Observable<JackpotSlip>
+  get():Observable<Gamecap>
   {
-    return this.http.get<JackpotSlip>('http://localhost:1041/Jackpot/Get');
+    return this.http.get<Gamecap>('http://localhost:1041/Gamecap/Get');
   }
 
-  Update(jackpotSlip:JackpotSlip):Observable<any>
+  Update(gamecap:Gamecap):Observable<any>
   {
-    return this.http.put<JackpotSlip>('http://localhost:1041/Jackpot/Update',jackpotSlip,httpOptions);
+    return this.http.put<Gamecap>('http://localhost:1041/Gamecap/Update',gamecap,httpOptions);
   }
 
 }

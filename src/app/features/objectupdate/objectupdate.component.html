@@ -1,9 +1,14 @@
 <div *ngIf="UpdateObject" id="updateobject">
 <table>
   <tr *ngFor="let key of getProperties()">
-    <td>{{key}}</td>
+    <!-- <td>{{key}}</td>
     <td>
       <input type="text" [(ngModel)]="UpdateObject[key]" class="inputs">
+    </td> -->
+    <td *ngIf="UpdateObject[key] != '[object Object]' ">
+      <mat-form-field class="formfield">
+        <input matInput type="text" placeholder="{{key}}" [(ngModel)]="UpdateObject[key]">
+      </mat-form-field>
     </td>
   </tr>
 </table>

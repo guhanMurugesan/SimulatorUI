@@ -6,3 +6,14 @@
     left: 25%;
     top: 12%;   
 }
+
+.deleteIcon
+  {
+      color: indianred !important;
+      cursor: pointer;
+  }
+
+  #tableView
+  {
+      overflow: scroll;
+  }

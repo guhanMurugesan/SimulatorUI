@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayersService } from '../../Services/players.service';
 import { Player } from '../../Modals/player';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-players',
@@ -14,7 +15,7 @@ export class PlayersComponent implements OnInit {
 
   selectedPlayer:Player;
 
-  constructor(private playersService:PlayersService) { }
+  constructor(private playersService:PlayersService,public snackBar: MatSnackBar) { }
 
   ngOnInit() {
       this.getPlayers();
@@ -31,7 +32,12 @@ export class PlayersComponent implements OnInit {
 
   update(){
     this.Message = "";
-    this.playersService.setPlayer(this.selectedPlayer).subscribe(x=> this.Message = x );
+    this.playersService.setPlayer(this.selectedPlayer).subscribe(x=> {
+      this.snackBar.open(x,'undo',{
+        duration: 500,
+        panelClass :'toaster'
+      });
+    } );
   }
 
 }

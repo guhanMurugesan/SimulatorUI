@@ -2,5 +2,10 @@
 {
     overflow-y: scroll;
     height: 300px;
+    width: 300px;
     font-family: monospace;
+}
+.formfield
+{
+    width: 100%;
 }

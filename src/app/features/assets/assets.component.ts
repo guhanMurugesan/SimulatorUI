@@ -28,12 +28,18 @@ export class AssetsComponent implements OnInit {
 
   delete(asset:Asset)
   {
-    this.assetService.remove(asset).subscribe();
+    this.assetService.remove(asset).subscribe(x=> {
+      this.getAssets();
+      this.dataSource = this.assets;
+    });
   }
 
   add()
   {
-    this.assetService.add(this.newAsset).subscribe();
+    this.assetService.add(this.newAsset).subscribe(x=> {
+      this.getAssets();
+      this.dataSource = this.assets;
+    });
   }
   
 }

@@ -2,12 +2,13 @@
     <app-objectupdate [UpdateObject]="data"></app-objectupdate>
     <table *ngIf="data">
       <tr>
-        <td><button (click)="UpdateConfig()" class="button">update</button></td>
+        <td>
+            <button mat-raised-button color="primary" (click)="UpdateConfig()">Update</button>
         <td><b>{{Message}}</b></td>
       </tr>
     </table>
     <div *ngIf="!data">
           <br/>
-          <b>No configuration Found!</b>
+          <mat-spinner></mat-spinner>
     </div>
 </div>

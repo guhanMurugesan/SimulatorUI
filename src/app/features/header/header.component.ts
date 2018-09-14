@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
 
   slideChange()
   {
+    console.log(this.slideValue);
       if(this.slideValue)
         this.coreService.TurnOn().subscribe();
       else

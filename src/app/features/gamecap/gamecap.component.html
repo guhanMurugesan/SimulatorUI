@@ -1,3 +1,15 @@
-<p>
-  gamecap works!
-</p>
+<div id="">
+  <app-objectupdate [UpdateObject]="data"></app-objectupdate>
+  <mat-divider></mat-divider>
+  <table *ngIf="data">
+    <tr>
+      <td>
+          <button mat-raised-button color="primary" (click)="update()">Update</button>
+      <td><b>{{Message}}</b></td>
+    </tr>
+  </table>
+  <div *ngIf="!data">
+        <br/>
+        <mat-spinner></mat-spinner>
+  </div>
+</div>

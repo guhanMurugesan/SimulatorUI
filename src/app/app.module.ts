@@ -11,8 +11,6 @@ import { PlayersComponent } from './features/players/players.component';
 import { AssetsComponent } from './features/assets/assets.component';
 import { ObjectupdateComponent } from './features/objectupdate/objectupdate.component';
 import { HttpClientModule }    from '@angular/common/http';
-import { BrowserXhr } from '../../node_modules/@angular/http';
-import { CustBrowserXhr } from './CustBrowserXhr';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
@@ -24,6 +22,11 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
 import { EmployeeComponent } from './features/employee/employee.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -46,10 +49,11 @@ import { EmployeeComponent } from './features/employee/employee.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,MatButtonModule,MatCheckboxModule,MatSlideToggleModule,MatTableModule,MatFormFieldModule,MatInputModule
+    BrowserAnimationsModule,MatButtonModule,MatCheckboxModule,MatSlideToggleModule,MatTableModule,MatFormFieldModule,MatInputModule,MatDividerModule,MatSnackBarModule,
+    MatProgressSpinnerModule, MatIconModule
   ],
   providers: [
-    {provide:BrowserXhr,useClass:CustBrowserXhr}
+    
   ],
   bootstrap: [AppComponent]
 })
